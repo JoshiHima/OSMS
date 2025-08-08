@@ -60,7 +60,7 @@
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="#Services" class="nav-link">Services</a></li>
             <li class="nav-item"><a href="#registration" class="nav-link">Registration</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="Requester/RequesterLogin.php" class="nav-link">Login</a></li>
             <li class="nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
         </ul>
     </div>
@@ -70,9 +70,9 @@
 <header class="jumbotron back-image" style="background-image: url(images/banner.jpeg); padding-right: 100px; padding-top: 80px; text-align: right;">
     <div class="myClass mainHeading">
         <h1 class="text-uppercase" style="color: #dc3545; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-weight: bold;">Welcome to ServiceEase</h1>
-        <p style="color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); font-style: italic; font-size: 24px;">Customer's Happiness is our Aim.</p>
-        <a href="#" class="btn btn-success mr-4">Login</a>
-        <a href="#" class="btn btn-danger mr-4">Sign Up</a>
+        <p style="color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); font-style: italic; font-size: 24px;">Best services and customer's satisfaction.</p>
+        <a href="Requester/RequesterLogin.php" class="btn btn-success mr-4">Login</a>
+        <a href="#registration" class="btn btn-danger mr-4">Sign Up</a>
     </div>
 </header> <!-- End Header Jumbotron -->
 

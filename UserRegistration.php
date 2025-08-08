@@ -1,3 +1,41 @@
+<?php 
+include('dbConnection.php');
+
+if(isset($_REQUEST['rSignup'])){
+    //checking for empty fields
+    if(($_REQUEST['rName'] == "") || ($_REQUEST['rEmail'] == "") || ($_REQUEST['rPassword'] == "")){
+        $regmsg =  '<div class="alert alert-warning mt-2" role="alert">All fields are required.<div>';
+    }else{
+        //email already registered
+        $sql = "SELECT r_email FROM requesterlogin_tb WHERE r_email = '".$_REQUEST['rEmail']."'";
+        $result = $conn->query($sql);
+        if($result->num_rows == 1){
+            $regmsg = '<div class = "alert alert-warning mt-2" role="alert">Email ID already registered</div>';
+        } else{
+            //assigning user's values to variables
+            $rName = $_REQUEST['rName'];
+            $rEmail = $_REQUEST['rEmail'];
+            $rPassword = $_REQUEST['rPassword'];
+
+            $sql = "INSERT INTO requesterlogin_tb(r_name, r_email, r_password) VALUES('$rName', '$rEmail', '$rPassword')";
+
+            if($conn->query($sql) == TRUE){
+                $regmsg = '<div class="alert alert-success mt-2" role="alert">Account Created Successfully.</div>';
+            }
+            else{
+                $regmsg = '<div class="alert alert-danger mt-2" role="alert>Unable to create account</div>';
+            }
+
+       }
+    
+    }
+} 
+
+
+?>
+
+
+
 <!-- Start Registration Form -->
 <div class="container pt-5" id="registration">
     <h2 class="text-center">Create an Account</h2>
@@ -22,6 +60,8 @@
 
                 <button type="submit" class="btn btn-danger mt-5 btn-block shadow-sm font-weight-bold" name="rSignup">Sign Up</button>
                 <em style="font-size: 12px;">Note- By Clicking Sign Up, you agree to our terms, data policy and cookie policy</em>
+
+                <?php if(isset($regmsg)) {echo $regmsg;}?>
             </form>
         </div>
     </div>
