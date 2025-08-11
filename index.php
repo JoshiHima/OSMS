@@ -51,7 +51,7 @@
 <!-- Start Navigation -->
 <nav class="navbar navbar-expand-sm navbar-dark bg-danger pl-5 fixed-top">
     <a href="index.php" class="navbar-brand">ServiceEase</a>
-    <span class="navbar-text ml-3 mr-auto">Customer's happiness is our Aim.</span>
+    <span class="navbar-text ml-3 mr-auto">Customer's satisfaction is our Aim.</span>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -202,7 +202,7 @@
 
             <div class="col-md-6 text-right"> <!-- Start 2nd column-->
                 <small>Designed by ServiceEase &copy; 2025</small>
-                <small class="ml-2"><a href="#">Admin Login</a></small>
+                <small class="ml-2"><a href="Admin/login.php">Admin Login</a></small>
             </div> <!-- End 2nd column-->
         </div>
     </div>
